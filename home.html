@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CYBER-SAREEN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<style>
+    body {
+        background: #151226;
+    }
+    
+    .content {
+        padding: auto;
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+    }
+    
+    .container {
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-self: auto;
+        position: relative;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+    
+    .centered {
+        position: absolute;
+    }
+    
+    nav {
+        background-color: #151226;
+        color: white;
+        background-color: #151226;
+        box-shadow: 0 8px 32px 0 rgba(172, 40, 238, 0.97);
+        backdrop-filter: blur( 6px);
+        -webkit-backdrop-filter: blur( 6px);
+        border-radius: 10px;
+    }
+    
+    .main {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .abc {
+        text-align: center;
+        text-transform: uppercase;
+        color: #f1faee;
+        font-size: 4rem;
+    }
+    
+    .roller {
+        height: 4.125rem;
+        line-height: 4rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #de18e2;
+    }
+    
+    #spare-time {
+        font-size: 1rem;
+        font-style: italic;
+        letter-spacing: 1rem;
+        margin-top: 0;
+        color: #a8dadc;
+    }
+    
+    .roller #rolltext {
+        position: absolute;
+        top: 0;
+        animation: slide 5s infinite;
+    }
+    
+    @keyframes slide {
+        0% {
+            top: 0;
+        }
+        25% {
+            top: -4rem;
+        }
+        50% {
+            top: -8rem;
+        }
+        72.5% {
+            top: -12.25rem;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .abc {
+            text-align: center;
+            text-transform: uppercase;
+            color: #f1faee;
+            font-size: 2.125rem;
+        }
+        .roller {
+            height: 2.6rem;
+            line-height: 2.125rem;
+        }
+        #spare-time {
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+        }
+        .roller #rolltext {
+            animation: slide-mob 5s infinite;
+        }
+        @keyframes slide-mob {
+            0% {
+                top: 0;
+            }
+            25% {
+                top: -2.125rem;
+            }
+            50% {
+                top: -4.25rem;
+            }
+            72.5% {
+                top: -6.375rem;
+            }
+        }
+    }
+    
+    .main1,
+    .main2,
+    .main3,
+    .main4,
+    .main5,
+    .main6 {
+        margin: 20px;
+        padding: auto;
+        width: 80%;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    @keyframes fade-in {
+        100% {
+            opacity: 1;
+            filter: blur(0);
+        }
+    }
+    
+    #about {
+        background-color: #100e1d;
+        height: 500px;
+        width: 100%;
+    }
+    
+    .club1,
+    .club2,
+    .club3 {
+        border: solid #a75fff 2px;
+        border-radius: 20px;
+        margin-top: 30px;
+        width: 87%;
+    }
+    
+    .abm {
+        padding: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-self: auto;
+        position: relative;
+        color: #f1faee;
+        background-color: #100e1d;
+    }
+    
+    .card1,
+    .card2,
+    .card3 {
+        margin: 20px;
+        border: solid 2px rgb(59, 19, 108);
+        border-radius: 10px;
+    }
+    
+    hr {
+        height: 5px;
+    }
+    
+    .servh,
+    .servc {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .c1,
+    .c2,
+    .c3,
+    .c4 {
+        margin: 10px;
+        padding: 15px;
+        text-decoration: none;
+        position: relative;
+        height: 60px;
+        width: 200px;
+        border: none;
+        outline: none;
+        color: white;
+        background: #111;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .c1:before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: -2px;
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+        border-radius: 5px;
+        z-index: -1;
+        opacity: 0;
+        filter: blur(5px);
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        transition: opacity .3s ease-in-out;
+        animation: animate 20s linear infinite;
+        text-decoration: none;
+    }
+    
+    .c1:hover:before {
+        opacity: 1;
+    }
+    
+    .c1:hover:active {
+        background: none;
+    }
+    
+    .c1:hover:active:before {
+        filter: blur(2px);
+    }
+    
+    .c2:before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: -2px;
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+        border-radius: 5px;
+        z-index: -1;
+        opacity: 0;
+        filter: blur(5px);
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        transition: opacity .3s ease-in-out;
+        animation: animate 20s linear infinite;
+    }
+    
+    .c2:hover:before {
+        opacity: 1;
+    }
+    
+    .c2:hover:active {
+        background: none;
+    }
+    
+    .c2:hover:active:before {
+        filter: blur(2px);
+    }
+    
+    .c3:before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: -2px;
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+        border-radius: 5px;
+        z-index: -1;
+        opacity: 0;
+        filter: blur(5px);
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        transition: opacity .3s ease-in-out;
+        animation: animate 20s linear infinite;
+    }
+    
+    .c3:hover:before {
+        opacity: 1;
+    }
+    
+    .c3:hover:active {
+        background: none;
+    }
+    
+    .c3:hover:active:before {
+        filter: blur(2px);
+    }
+    
+    .c4:before {
+        position: absolute;
+        content: '';
+        top: -2px;
+        left: -2px;
+        height: calc(100% + 4px);
+        width: calc(100% + 4px);
+        border-radius: 5px;
+        z-index: -1;
+        opacity: 0;
+        filter: blur(5px);
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        background-size: 400%;
+        transition: opacity .3s ease-in-out;
+        animation: animate 20s linear infinite;
+    }
+    
+    .c4:hover:before {
+        opacity: 1;
+    }
+    
+    .c4:hover:active {
+        background: none;
+    }
+    
+    .c4:hover:active:before {
+        filter: blur(2px);
+    }
+    
+    @keyframes animate {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    
+    .service {
+        margin: 20px;
+        padding: 20px;
+        border: white solid 2px;
+        border-radius: 20px;
+        color: white;
+    }
+</style>
+
+<body>
+
+
+    <nav style="color: white;" class="navbar navbar-expand-lg bg-body-tertiary">
+        <div style="color: white;" class="container-fluid">
+            <a class="navbar-brand" style="color:#a75fff;" href="index.html">Sareen's</a>
+            <button class="navbar-toggler" type="button" style="background-color: #f1faee;  color: #f1faee; box-shadow: 0 8px 32px 0 rgba(172, 40, 238, 0.97);
+            backdrop-filter: blur( 6px);
+            -webkit-backdrop-filter: blur( 6px);
+            border-radius: 10px;
+            " data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" style="color: white;" aria-label="Toggle navigation">
+            <span style="color: white;" class="navbar-toggler-icon"></span>
+          </button>
+            <div style="color: white;" class="collapse navbar-collapse" id="navbarNav">
+                <ul style="color: white;" class="navbar-nav">
+                    <li style="color: white;" class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html" style="color: white;">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="roadmap.html">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="cource.html">Cources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="articles.html">S.E</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" href="#about">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+
+    <div class="container"><img style="border-radius: 30px; filter: blur(5px);height: 600px;width: 100000px; " src="anas-alshanti-feXpdV001o4-unsplash.jpg" alt="picture">
+        <div class="centered">
+            <center><b><div class="main" style="font-family:Copperplate;">
+                    <h1 class="abc">WELCOME TO CYBER SAREEN <br>
+
+                        <div class="roller"><br>
+                            <span id="rolltext"> LEARN!<br/>
+                  CODE!<br/>
+                  TRACK!<br/>
+                  HACK!<br/>
+                  </div></b></center>
+            </h1>
+
+        </div>
+    </div>
+    </div><b>
+    <div class="content" style="font-family:Copperplate;">
+        <h1>
+            <div class="club1"><div class="main1" style="  
+        color: #fb18ff;font-size:4.5rem;"> What is Ethical Hacking?<hr></div>
+            <div class="main2">
+                Ans: Ethical hacking refers to the process of using hacking techniques and tools to identify vulnerabilities and weaknesses in computer systems and networks. Unlike malicious hacking, ethical hacking is done with the permission and knowledge of the system or network owner in order to improve the security of the system.
+                </div></div>
+        <div class="club2"><div class="main3" style="  
+        color: #fb18ff;font-size:4.5rem;">Why do we need Cyber Security? <hr></div>
+            <div class="main4">Ans: Learning cyber security is essential in today's digital age because it helps us protect our personal and professional information from cyber threats. As we become more reliant on technology, the risk of cyber attacks also increases. Cyber security education equips individuals with the knowledge and skills to prevent, detect, and respond to cyber attacks, safeguarding their sensitive data and assets.
+
+            </div></div>
+            
+            <div class="club3"><div class="main5" style="  
+        color: #fb18ff;font-size:4.5rem;">Why join us? <hr></div>
+            <div class="main6">Ans: we aim to provide best available information realted to ethical hacking and cybersecurity. we provide a roadmap in or to pursue ethical hacking as your career.</div></div>
+            
+        </h1>
+        </b>
+
+    </div>
+    <center>
+        <div class="servh" style="font-size: 3.5rem;font-family: Copperplate;color:#a75fff;">NAVIGATE TO: </div>
+    </center>
+    <center>
+        <div class="servc">
+            <a href="roadmap.html" class="c1">ROAD MAP</a>
+            <a href="cource.html" class="c2">COURCES</a>
+            <a href="articles.html" class="c4" style="text-decoration: none;">Social Engineering</a>
+        </div>
+    </center>
+    <br>
+
+    <br>
+    <div id="about">
+        <center style="  
+        color: white;font-size:2.5rem;font-family:Copperplate;"><b>Get In Touch With us</b></center>
+        <div class="abm">
+            <div class="card1">
+                <div class="card" style="width: 18rem;background-color: #100e1d;">
+                    <img src="gabriella-clare-marino-GSLA0FVY9qI-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #100e1d;">
+                        <h5 class="card-title">About Us</h5>
+                        <p class="card-text">CyberSareen provides adequate knowledge to every visiter.We offer an integrated portfolio of solutions combining the power of cutting-edge technology in Mobile apps, Cloud, Cyber Security & Digital.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card" style="width:18rem;background-color: #100e1d;text-align: left;">
+                    <img src="WhatsApp Image 2023-03-25 at 18.45.58.jpg" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #100e1d;">
+                        <h5 class="card-title">Contact Us</h5>
+                        <p class="card-text">#13, kalka ji enclave extn.,Y block,Rishi Nagar, Ludhiana, Punjab <br>Contact No.: +91 7087603933
+                            <br>Email: uniquev.99@gmail.com <br><br> Linkedin:https://www.linkedin.com/in/vedant-sareen-418358166 <br><br></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card3">
+                <div class="card" style="width: 18rem;background-color: #100e1d;">
+                    <img src="WhatsApp Image 2023-03-12 at 16.51.21.jpg" class="card-img-top" alt="...">
+                    <div class="card-body" style="background-color: #100e1d;">
+                        <h5 class="card-title">Support Us</h5>
+                        <p class="card-text">maintainence of website as well keeping it upto date is quite challenging.i will be thankful to the user for his/her support.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
