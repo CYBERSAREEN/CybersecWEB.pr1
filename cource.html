@@ -75,6 +75,31 @@
         flex-wrap: wrap;
     }
 </style>
+<style>
+    img {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    img.show {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    function showImages() {
+        var images = document.getElementsByTagName('img');
+        for (var i = 0; i < images.length; i++) {
+            var image = images[i];
+            if (image.getBoundingClientRect().top < window.innerHeight) {
+                image.classList.add('show');
+            }
+        }
+    }
+
+    window.addEventListener('load', showImages);
+    window.addEventListener('scroll', showImages);
+</script>
 
 <body>
 
